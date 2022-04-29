@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-bottom: -1px;
+    list-style: none;
+    text-decoration: none;
+    /* overflow-y: hidden;
+    overflow-x: hidden; */
+
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    min-width: 100vw;
+    width: 100%;
+    height: 100%;
+    /* overflow-x: hidden; */
+    display: block;
+}
+
+nav {
+    background: #1964E6;
+    height: 80px;
+    width: 100%;
+}
+
+nav ul {
+    float: right;
+    margin-right: 10px;
+
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 410px;
+    margin-top: 10px;
+
+}
+
+nav ul li a {
+    color: white;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+
+nav a {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+}
+
+nav a::before,
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
+nav a::before {
+    background-color: #54b3d6;
+    height: 2px;
+    bottom: 0;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+nav a::after {
+    content: attr(data-replace);
+    height: 100%;
+    top: 0;
+    transform-origin: 100% 50%;
+    transform: translate3d(200%, 0, 0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+    color: #54b3d6;
+}
+
+nav a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+}
+
+nav a:hover::after {
+    transform: translate3d(0, 0, 0);
+}
+
+nav a span {
+    display: inline-block;
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+nav a:hover span {
+    transform: translate3d(-200%, 0, 0);
+}
+
+
+/* body::-webkit-scrollbar {
+    background-color: #2a2c36;
+    border: 10px solid transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(21, 20, 28, .8);
+    border-radius: 10px;
+} */
+
+
+.stars1 .fa{
+    color: blue;
+}
+.stars2 .fa{
+    color: blue;
+}
+.stars3 .fa{
+    color: blue;
+}
+
+.merch1 .merch2 .merch3{
+    width: 670px;
+    height: 43.33%;
+    float: left;
+}
+
+.col-4 h4{
+    color: white;
+    font-size: 25px;
+}
+
+.col-4{
+    margin-top: 100px;
+}
+
+/* .fa{
+    position: sticky;
+    top: 100px;
+    left: 100px;
+} */
+
+.background img {
+    top: 0%;
+    bottom: 0%;
+    opacity: 0.9;
+    position: fixed;
+    object-fit: cover;
+    z-index: -1;
+    width: 100% !important;
+    height: 100% !important;
+}
